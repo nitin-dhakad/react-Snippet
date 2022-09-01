@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Landing from "./screens/landing/index";
+import Login from "./screens/login";
+import { Provider } from "react-redux";
+import store from "./store/index";
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+       <Landing />
+      {/* {isLoggedIn ? (
+        <Landing />
+      ) : (
+        <div className="App">
+          <Login onSuccess={setLoggedIn} />
+        </div>
+      )} */}
+    </Provider>
   );
 }
 

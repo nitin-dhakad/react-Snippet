@@ -1,0 +1,25 @@
+.container-landing{
+    padding: 10px;
+    background-color: rgb(198, 198, 198);
+}
+.logo-landing{
+    background-color: rgb(74, 146, 74);
+    color: white;
+    margin-left: 20px;
+    font-size: x-large;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+.header-landing{
+    display: flex;
+    justify-content: space-between;
+}
+.searchBar-landing{
+    border: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
